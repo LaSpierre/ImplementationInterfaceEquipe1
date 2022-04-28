@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="login_pane"
+      alignment="CENTER"
+      stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ca.project.bluepar2.HelloController">
+
+        <VBox fx:id="login_form" spacing="15">
+
+            <Text styleClass="titre_primaire">Bienvenue a Centre Aquatique
+            </Text>
+            <Text styleClass="titre_secondaire">Connectez-vous a votre Compte</Text>
+
+            <Label textAlignment="LEFT">Nom d'utilisateur:
+            </Label>
+            <TextField  fx:id="nomUtilisateur" styleClass="input" />
+
+            <Label textAlignment="LEFT">Mot de passe:
+            </Label>
+            <PasswordField fx:id="motDePasse" styleClass="input" />
+            <Text fx:id="message" fill="#ef0404" />
+            <Button fx:id="login_btn" onMouseClicked="#check">
+              Se connecter
+            </Button>
+
+        </VBox>
+
+<!--    </StackPane>-->
+
+</HBox>

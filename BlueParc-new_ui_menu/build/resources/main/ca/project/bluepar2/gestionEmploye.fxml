@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600" minWidth="800"
+      prefHeight="600.0" prefWidth="800.0"
+      xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ca.project.bluepar2.GestionEmployesController">
+    <children>
+        <AnchorPane id="entete" prefHeight="50.0" prefWidth="800.0">
+            <children>
+                <Button fx:id="btnRetourFenPrincipale" alignment="TOP_RIGHT" layoutX="581.0" layoutY="14.0" mnemonicParsing="false" text="Revenir à la fenêtre principale" AnchorPane.rightAnchor="10.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets></Button>
+                <Label layoutY="2.0" prefHeight="16.0" prefWidth="300.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-padding: 10;" text="Gestion des employés" AnchorPane.leftAnchor="10.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+            </children>
+        </AnchorPane>
+        <HBox prefHeight="162.0" prefWidth="800.0">
+            <children>
+                <VBox prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Nom d'usager: " />
+                                <TextField fx:id="txtNomUsager" prefHeight="24.0" prefWidth="230.0" />
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Nom de famille: " />
+                                <TextField fx:id="txtNomFamille" prefHeight="24.0" prefWidth="230.0" />
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Prénom: " />
+                                <TextField fx:id="txtPrenom" prefHeight="24.0" prefWidth="230.0" />
+                            </children>
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </HBox>
+                    </children></VBox>
+                <VBox prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Date début: " />
+                                <DatePicker fx:id="datePickerDebut" />
+                            </children>
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Date fin: " />
+                                <DatePicker fx:id="datePickerFin" />
+                            </children>
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Numéro employé: " />
+                                <TextField fx:id="txtNoEmploye" />
+                            </children>
+                            <padding>
+                                <Insets right="48.0" />
+                            </padding>
+                        </HBox>
+                    </children></VBox>
+            </children></HBox>
+        <HBox prefHeight="47.0" prefWidth="800.0" style="-fx-background-color: lightgrey;" VBox.vgrow="ALWAYS">
+            <children>
+                <Label fx:id="lblErreur" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="544.0" textAlignment="CENTER" textFill="#ee0707" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </HBox.margin></Label>
+                <Button fx:id="btnEffacerFormulaire" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: rgb(102,153,255);" text="Effacer le formulaire">
+                    <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                    </HBox.margin></Button>
+            </children></HBox>
+        <TableView fx:id="tableVue" prefHeight="350.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="nomUsager" prefWidth="145.0" text="Nom usager" />
+                <TableColumn fx:id="nomFamille" minWidth="5.0" prefWidth="127.0" text="Nom famille" />
+                <TableColumn fx:id="prenom" minWidth="5.0" prefWidth="127.0" text="Prénom" />
+                <TableColumn fx:id="dateDebut" minWidth="5.0" prefWidth="127.0" text="Date début" />
+                <TableColumn fx:id="dateFin" minWidth="5.0" prefWidth="127.0" text="Date fin" />
+                <TableColumn fx:id="noEmploye" minWidth="5.0" prefWidth="146.0" text="No. Employé" />
+            </columns>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TableView>
+        <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="800.0">
+            <children>
+                <Button fx:id="btnAjout" mnemonicParsing="false" text="Ajouter un employé">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btnRecherche" mnemonicParsing="false" text="Rechercher un employé">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btnSupprime" mnemonicParsing="false" text="Supprimer les éléments sélectionnés">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin></Button>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="btnEffacerSelection" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="49.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: rgb(102,153,255);" text="Effacer la sélection" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</VBox>

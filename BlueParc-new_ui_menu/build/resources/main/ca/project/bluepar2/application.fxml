@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox fx:id="pane" stylesheets="@application_style.css"
+      xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ca.project.bluepar2.ApplicationController">
+    <HBox fx:id="en_tete" alignment="CENTER">
+        <VBox alignment="CENTER">
+            <Text fx:id="titre_primaire">PARC AQUATIQUE</Text>
+        </VBox>
+<!--        <ImageView disable="true" fitHeight="900" fitWidth="900" pickOnBounds="true" preserveRatio="true">-->
+<!--         <image>-->
+<!--            <Image url="@images/demiz.jpg" />-->
+<!--         </image></ImageView>-->
+    </HBox>
+    <GridPane fx:id="menu_pane" alignment="CENTER" hgap="10" vgap="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="20" />
+        </padding>
+        <Button fx:id="accueil" alignment="CENTER" contentDisplay="TOP" onAction="#openWindow" styleClass="btn_menu" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            Accueil
+            <graphic>
+                <ImageView pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/ic_home.png" />
+                    </image></ImageView>
+            </graphic>
+        </Button>
+
+
+            <Button fx:id="employe" alignment="CENTER" contentDisplay="TOP" onAction="#openWindow" styleClass="btn_menu" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                Employe
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@images/ic_employee.png" />
+                        </image></ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="client" alignment="CENTER" contentDisplay="TOP" onAction="#openWindow" styleClass="btn_menu" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                Client
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@images/ic_custommer.png" />
+                        </image></ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="activite" alignment="CENTER" contentDisplay="TOP" onAction="#openWindow" styleClass="btn_menu" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                Activite
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@images/ic_card-list.png" />
+                        </image></ImageView>
+                </graphic>
+            </Button>
+
+        <Button fx:id="close" alignment="CENTER" contentDisplay="TOP" onAction="#openWindow" styleClass="btn_menu" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            Deconnexion
+            <graphic>
+                <ImageView pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/ic_logout.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+</VBox>

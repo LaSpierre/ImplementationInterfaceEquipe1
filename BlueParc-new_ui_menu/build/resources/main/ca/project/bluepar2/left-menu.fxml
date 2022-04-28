@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<VBox
+        alignment="TOP_LEFT"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        spacing="10"
+        fx:id="menu">
+    <padding>
+        <Insets top="20" left="10" right="10"></Insets>
+    </padding>
+    <HBox alignment="CENTER">
+        <Text styleClass="titre_secondaire">Menu</Text>
+    </HBox>
+    <!--            <Text styleClass="categorie_menu">Création</Text>-->
+    <VBox alignment="TOP_CENTER" spacing="5">
+        <padding>
+            <Insets left="20"/>
+        </padding>
+        <Button styleClass="menu_action">Employe</Button>
+        <Button styleClass="menu_action">Activite</Button>
+        <Button styleClass="menu_action">Client</Button>
+    </VBox>
+
+</VBox>

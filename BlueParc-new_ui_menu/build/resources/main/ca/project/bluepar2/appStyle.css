@@ -1,0 +1,15 @@
+.enteteGroupe{
+    -fx-font-weight:bold;
+}
+
+.activites{
+    -fx-border-color: lightgrey;
+}
+
+.activitesJours {
+    -fx-padding: 5 0 0 10;
+}
+
+.check-box{
+    -fx-font-style: italic;
+}

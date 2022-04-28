@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<AnchorPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ca.project.bluepar2.ApplicationController"
+        fx:id="en_tete">
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+    <StackPane AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10">
+        <AnchorPane>
+            <!--                    <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" fitWidth="100" fitHeight="100">-->
+            <!--                        <image>-->
+            <!--                            <Image url="@images/icone_monstre.png"/>-->
+            <!--                        </image>-->
+            <!--                    </ImageView>-->
+            <Text fx:id="titre_fenetre" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="50">Gestion Parc Aquatique
+            </Text>
+        </AnchorPane>
+    </StackPane>
+    <HBox alignment="CENTER_RIGHT" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" spacing="10">
+        <Text fx:id="nom_utilisateur">ALBERTDEV</Text>
+        <Button styleClass="en_tete_action" onAction="#quitter">Quitter</Button>
+    </HBox>
+</AnchorPane>

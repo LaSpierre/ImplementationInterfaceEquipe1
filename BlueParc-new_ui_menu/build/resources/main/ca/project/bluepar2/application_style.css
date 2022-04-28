@@ -1,0 +1,45 @@
+#en_tete, #menu {
+    -fx-background-color: lightblue;
+    -fx-min-height: 300px;
+    -fx-max-height: 800px;
+    -fx-background-image: url("images/demiz.jpg");
+    -fx-background-size: cover;
+}
+
+#titre_primaire{
+    -fx-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.btn_menu{
+    -fx-min-height: 100px;
+    -fx-min-width: 180px;
+    -fx-border: none;
+    -fx-border-radius: 0;
+    -fx-background-color: rgb(97, 174, 237);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.text_menu{
+    -fx-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#nom_utilisateur{
+    -fx-font-weight: bold;
+}
+
+#en_tete {
+    /*-fx-border-width: 0 0 2 0;*/
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: #6e6eea;*/
+}
+#pane{
+    -fx-background-color: rgba(235, 235, 243, 0.78);
+}
+.menu_action {
+    -fx-min-width: 125px;
+    -fx-font-size: 10pt;
+}
